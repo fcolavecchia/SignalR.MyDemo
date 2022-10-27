@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Data\apple.csv" />
+    <Compile Include="Auth.fs" />
+    <Compile Include="SaturnExtensions.fs" />
+    <Compile Include="Api.fs" />
+    <Compile Include="Stocks.fs" />
+    <Compile Include="Ticker.fs" />
+    <Compile Include="SignalR.fs" />
+    <Compile Include="Env.fs" />
+    <Compile Include="App.fs" />
+<!--    <None Include="paket.references" />-->
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fable.Remoting.Giraffe" Version="5.13.0" />
+    <PackageReference Include="Fable.SignalR" Version="0.11.5" />
+    <PackageReference Include="Fable.SignalR.Elmish" Version="0.11.5" />
+    <PackageReference Include="Fable.SignalR.Saturn" Version="0.11.5" />
+    <PackageReference Include="FSharp.Control.AsyncSeq" Version="3.2.1" />
+    <PackageReference Include="FSharp.Data" Version="5.0.2" />
+    <PackageReference Include="Giraffe" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="5.0.17" />
+    <PackageReference Include="Saturn" Version="0.16.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="5.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.fsproj" />
+  </ItemGroup>
+<!--  <ItemGroup>-->
+<!--    <ProjectReference Include="..\..\src\Fable.SignalR.Saturn\Fable.SignalR.Saturn.fsproj" />-->
+<!--    <ProjectReference Include="..\Shared\Shared.fsproj" />-->
+<!--  </ItemGroup>-->
+<!--  <Import Project="..\..\.paket\Paket.Restore.targets" />-->
+</Project>
